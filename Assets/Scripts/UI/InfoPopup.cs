@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InfoPopup : MonoBehaviour
 {
@@ -25,5 +26,10 @@ public class InfoPopup : MonoBehaviour
 
         newEntry.Count.text = count.ToString();
         newEntry.Icone.sprite = Icone;
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
